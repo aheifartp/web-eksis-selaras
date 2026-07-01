@@ -109,6 +109,19 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Call to Action */}
+      <section className="py-24 px-5 md:px-16 bg-white border-t border-outline-variant text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-headline-md text-3xl md:text-4xl text-on-surface mb-6">Terima kasih telah mengunjungi website kami</h2>
+          <div className="w-[60px] h-[1px] bg-primary-container mx-auto mb-6"></div>
+          <p className="font-body-md text-on-surface-variant mb-8 text-lg">Tertarik dengan produk kami? Silakan hubungi admin kami untuk informasi lebih lanjut.</p>
+          <a href="https://wa.me/62895384264960" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 font-button text-sm tracking-wider bg-primary-container text-on-primary px-10 py-4 rounded hover:bg-primary transition-colors min-w-[200px] shadow-md hover:shadow-lg uppercase">
+            <i className="fa-brands fa-whatsapp text-2xl"></i>
+            Kontak Admin
+          </a>
+        </div>
+      </section>
     </Layout>
   );
 };

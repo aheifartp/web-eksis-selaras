@@ -1,31 +1,66 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-const TermsConditions = () => {
+const TermsAndConditions = () => {
   return (
     <Layout>
-      <header className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[#1a1c1c]/60 z-10"></div>
-        <img src="/assets/images/living_room.png" alt="Terms & Conditions" className="absolute inset-0 w-full h-full object-cover object-center animate-pulse-slow" />
-        <div className="relative z-20 text-center px-5 text-on-primary">
-          <h1 className="font-headline-lg text-4xl md:text-5xl mb-4 animate-fade-in-up">{title}</h1>
-          <p className="font-body-lg text-lg opacity-90 animate-fade-in-up-delay-1">{subtitle}</p>
-        </div>
+      <header className="pt-24 pb-12 px-5 md:px-16 max-w-[1280px] mx-auto text-center">
+        <h1 className="font-headline-xl text-4xl md:text-5xl mb-6">Terms & Conditions</h1>
+        <div className="w-[60px] h-[1px] bg-primary-container mx-auto mb-8"></div>
+        <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Syarat dan ketentuan layanan PT Hanara Eksis Selaras.</p>
       </header>
-      
-      <main className="py-24 px-5 md:px-16 max-w-[800px] mx-auto min-h-[40vh]">
-        <div className="prose prose-lg mx-auto font-body-md text-on-surface-variant animate-fade-in-up-delay-2">
-          <p className="mb-6">
-            Welcome to the Terms & Conditions page. This section provides detailed information about our premium offerings and philosophy.
-            Every piece is crafted with meticulous attention to detail, adhering to the highest standards of UI/UX and interior design.
-          </p>
-          <p>
-            Explore our carefully curated selections designed to elevate your living spaces with timeless elegance and modern functionality.
-          </p>
+
+      <main className="px-5 md:px-16 max-w-4xl mx-auto pb-32">
+        <div className="bg-white p-8 md:p-12 rounded-xl shadow-sm border border-outline-variant space-y-8 font-body-md text-on-surface-variant leading-relaxed">
+          
+          <section>
+            <h2 className="font-headline-md text-2xl text-on-surface mb-4">1. Ketentuan Umum</h2>
+            <p>
+              Dengan mengakses dan menggunakan situs web ini, Anda dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku. PT Hanara Eksis Selaras berhak mengubah ketentuan ini kapan saja tanpa pemberitahuan sebelumnya.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-headline-md text-2xl text-on-surface mb-4">2. Layanan dan Produk</h2>
+            <p>
+              Kami menyediakan layanan pembuatan dan penjualan furnitur (Standar, Custom, dan Interior). Gambar produk yang ditampilkan pada website adalah ilustrasi dan dapat memiliki sedikit perbedaan warna dengan produk asli akibat pencahayaan atau resolusi layar.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-headline-md text-2xl text-on-surface mb-4">3. Pemesanan dan Pembayaran</h2>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Pemesanan dapat dilakukan melalui kontak WhatsApp resmi yang tertera di situs web.</li>
+              <li>Sistem pembayaran dan termin cicilan (jika ada) akan disepakati bersama antara pihak pembeli dan PT Hanara Eksis Selaras.</li>
+              <li>Produksi akan dimulai setelah pembayaran Down Payment (DP) diterima dan dikonfirmasi.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="font-headline-md text-2xl text-on-surface mb-4">4. Pengiriman dan Instalasi</h2>
+            <p>
+              Kami menyediakan layanan pengiriman dan instalasi. Biaya tambahan mungkin berlaku tergantung jarak lokasi pengiriman. Waktu pengiriman akan diestimasikan berdasarkan ketersediaan barang dan jadwal antrean produksi.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-headline-md text-2xl text-on-surface mb-4">5. Garansi</h2>
+            <p>
+              Semua produk custom dan interior dari PT Hanara Eksis Selaras dilengkapi dengan garansi kualitas (syarat dan durasi garansi diinformasikan saat pembelian). Garansi tidak berlaku untuk kerusakan yang disebabkan oleh kelalaian pengguna, bencana alam, atau modifikasi sepihak.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-headline-md text-2xl text-on-surface mb-4">6. Hubungi Kami</h2>
+            <p>
+              Jika Anda memiliki pertanyaan terkait syarat dan ketentuan ini, silakan menghubungi admin kami melalui halaman Kontak atau langsung melalui WhatsApp resmi kami.
+            </p>
+          </section>
+
         </div>
       </main>
     </Layout>
   );
 };
 
-export default TermsConditions;
+export default TermsAndConditions;

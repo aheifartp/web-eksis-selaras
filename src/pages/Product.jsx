@@ -97,10 +97,10 @@ const Product = () => {
         </aside>
 
         {/* Product Grid */}
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16">
+        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.map((product) => (
-            <div key={product.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden aspect-[4/5] mb-6 bg-surface-bright rounded-lg">
+            <div key={product.id} className="group cursor-pointer bg-white border border-outline-variant rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+              <div className="relative overflow-hidden aspect-square mb-6 bg-surface-bright rounded-lg w-full">
                 <img 
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
                   src={product.img} 
@@ -108,12 +108,14 @@ const Product = () => {
                 />
                 <div className="absolute inset-0 border border-primary-container opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg"></div>
               </div>
-              <div className="text-center">
-                <h3 className="font-headline-md text-xl md:text-2xl mb-2">{product.title}</h3>
-                <p className="font-body-md text-on-surface-variant mb-6">{product.desc}</p>
-                <button className="bg-primary-container text-on-primary font-button px-8 py-3 rounded hover:bg-primary transition-colors duration-300 w-full sm:w-auto">
+              <div className="text-center flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-headline-md text-xl mb-2 text-on-surface">{product.title}</h3>
+                  <p className="font-body-md text-on-surface-variant mb-6 text-sm">{product.desc}</p>
+                </div>
+                <a href="https://wa.me/62895384264960" target="_blank" rel="noopener noreferrer" className="inline-block bg-primary-container text-on-primary font-button px-6 py-3 rounded hover:bg-primary transition-colors duration-300 w-full">
                   Tanya Harga
-                </button>
+                </a>
               </div>
             </div>
           ))}

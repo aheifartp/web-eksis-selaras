@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const Dropdown = ({ title, links }) => (
+const Dropdown = ({ title, links, isDropdownActive }) => (
   <div className="relative group">
-    <button className="text-on-surface group-hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line flex items-center py-2">
+    <button className={`${isDropdownActive ? 'text-primary' : 'text-on-surface'} group-hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line flex items-center py-2`}>
       {title} <span className="material-symbols-outlined text-[16px] ml-1">expand_more</span>
     </button>
     <div className="absolute top-full left-0 mt-0 w-56 bg-white border border-outline-variant shadow-lg rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all ease-out duration-300 flex flex-col z-50">
@@ -16,11 +16,11 @@ const Dropdown = ({ title, links }) => (
   </div>
 );
 
-const MobileAccordion = ({ title, links, closeMenu }) => {
+const MobileAccordion = ({ title, links, closeMenu, isDropdownActive }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col">
-      <button onClick={() => setIsOpen(!isOpen)} className="text-on-surface font-body-md flex justify-between items-center py-2 text-left">
+      <button onClick={() => setIsOpen(!isOpen)} className={`${isDropdownActive ? 'text-primary' : 'text-on-surface'} font-body-md flex justify-between items-center py-2 text-left`}>
         {title} <span className="material-symbols-outlined">{isOpen ? 'expand_less' : 'expand_more'}</span>
       </button>
       {isOpen && (
@@ -62,6 +62,13 @@ const Navbar = () => {
 
 
 
+  const checkActive = (path) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path);
+  };
+
+  const isAboutActive = location.pathname.startsWith('/about') || location.pathname.startsWith('/terms');
+
   return (
     <nav className={`fixed top-0 w-full z-50 bg-surface border-b border-outline-variant transition-all duration-300 ${isScrolled ? 'shadow-sm' : ''}`}>
       <div className="flex justify-between items-center px-5 md:px-16 py-4 max-w-[1280px] mx-auto">
@@ -70,17 +77,16 @@ const Navbar = () => {
         </Link>
         
         <div className="hidden lg:flex space-x-6 xl:space-x-8 items-center mx-8">
-          <Link to="/" className="text-on-surface hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap">Beranda</Link>
-          <Dropdown title="About" links={aboutLinks} />
-          <Link to="/product" className="text-on-surface hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap">Product</Link>
-          <Link to="/partnership" className="text-on-surface hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap">Partnership</Link>
-          <Link to="/portfolio" className="text-on-surface hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap">Projects</Link>
+          <Link to="/" className={`${checkActive('/') ? 'text-primary' : 'text-on-surface'} hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap`}>Beranda</Link>
+          <Dropdown title="About" links={aboutLinks} isDropdownActive={isAboutActive} />
+          <Link to="/product" className={`${checkActive('/product') ? 'text-primary' : 'text-on-surface'} hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap`}>Product</Link>
+          <Link to="/partnership" className={`${checkActive('/partnership') ? 'text-primary' : 'text-on-surface'} hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap`}>Partnership</Link>
+          <Link to="/portfolio" className={`${checkActive('/portfolio') ? 'text-primary' : 'text-on-surface'} hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap`}>Projects</Link>
+          <Link to="/contact" className={`${checkActive('/contact') ? 'text-primary' : 'text-on-surface'} hover:text-primary transition-colors duration-300 font-body-md font-semibold tracking-wide relative hover-gold-line py-2 whitespace-nowrap`}>Contact Us</Link>
         </div>
 
         <div className="flex items-center gap-4">
-          <Link to="/contact" className="hidden lg:inline-block bg-primary-container text-on-primary font-button px-6 py-3 rounded hover:bg-primary transition-colors duration-300">
-            Tanya Harga
-          </Link>
+
           <button className="md:hidden text-on-surface" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             <span className="material-symbols-outlined text-3xl">{isMobileMenuOpen ? 'close' : 'menu'}</span>
           </button>
@@ -89,12 +95,12 @@ const Navbar = () => {
       
       {isMobileMenuOpen && (
         <div className="md:hidden bg-surface border-b border-outline-variant py-4 px-5 flex flex-col space-y-2 max-h-[80vh] overflow-y-auto">
-          <Link to="/" onClick={closeMenu} className="text-on-surface py-2 font-body-md">Beranda</Link>
-          <MobileAccordion title="About" links={aboutLinks} closeMenu={closeMenu} />
-          <Link to="/product" onClick={closeMenu} className="text-on-surface py-2 font-body-md">Product</Link>
-          <Link to="/partnership" onClick={closeMenu} className="text-on-surface py-2 font-body-md">Partnership</Link>
-          <Link to="/portfolio" onClick={closeMenu} className="text-on-surface py-2 font-body-md">Projects</Link>
-          <Link to="/contact" onClick={closeMenu} className="bg-primary-container text-on-primary text-center py-3 rounded mt-4 font-button">Tanya Harga</Link>
+          <Link to="/" onClick={closeMenu} className={`${checkActive('/') ? 'text-primary' : 'text-on-surface'} py-2 font-body-md`}>Beranda</Link>
+          <MobileAccordion title="About" links={aboutLinks} closeMenu={closeMenu} isDropdownActive={isAboutActive} />
+          <Link to="/product" onClick={closeMenu} className={`${checkActive('/product') ? 'text-primary' : 'text-on-surface'} py-2 font-body-md`}>Product</Link>
+          <Link to="/partnership" onClick={closeMenu} className={`${checkActive('/partnership') ? 'text-primary' : 'text-on-surface'} py-2 font-body-md`}>Partnership</Link>
+          <Link to="/portfolio" onClick={closeMenu} className={`${checkActive('/portfolio') ? 'text-primary' : 'text-on-surface'} py-2 font-body-md`}>Projects</Link>
+          <Link to="/contact" onClick={closeMenu} className={`${checkActive('/contact') ? 'text-primary' : 'text-on-surface'} py-2 font-body-md`}>Contact Us</Link>
         </div>
       )}
     </nav>

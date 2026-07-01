@@ -10,42 +10,49 @@ const Contact = () => {
         <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Get in touch to discuss your next project or inquire about our collections.</p>
       </header>
 
-      <section className="px-5 md:px-16 max-w-[1280px] mx-auto pb-32 grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div>
-          <h2 className="font-headline-md text-2xl mb-6">Our Showroom</h2>
-          <p className="font-body-md text-on-surface-variant mb-4 flex items-start gap-3">
-            <span className="material-symbols-outlined text-primary-container">location_on</span>
-            Jl. Sudirman No. 123, Jakarta Selatan<br/>Indonesia 12190
-          </p>
-          <p className="font-body-md text-on-surface-variant mb-4 flex items-start gap-3">
-            <span className="material-symbols-outlined text-primary-container">schedule</span>
-            Mon - Fri: 10:00 AM - 7:00 PM<br/>Sat - Sun: 11:00 AM - 5:00 PM
-          </p>
-          <p className="font-body-md text-on-surface-variant mb-8 flex items-center gap-3">
-            <span className="material-symbols-outlined text-primary-container">call</span>
-            +62 811-1234-5678
-          </p>
-          <a href="#" className="inline-flex items-center gap-2 bg-green-600 text-white font-button px-6 py-3 rounded hover:bg-green-700 transition-colors">
-            Chat on WhatsApp
-          </a>
-        </div>
+      <section className="px-5 md:px-16 max-w-3xl mx-auto pb-32 text-center">
+        <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-surface-variant flex flex-col items-center">
+          <h2 className="font-headline-md text-3xl mb-8">Informasi Kontak</h2>
+          
+          <div className="flex flex-col gap-6 w-full max-w-md text-left mx-auto mb-10">
+            <div className="flex items-start gap-4">
+              <span className="material-symbols-outlined text-primary-container text-3xl mt-1">location_on</span>
+              <div>
+                <h4 className="font-headline-md text-lg">Showroom Kami</h4>
+                <p className="font-body-md text-on-surface-variant leading-relaxed">
+                  Pesona Gading Cibitung Blok F2 No. 07,<br/>
+                  RT.04/RW.016, Wanajaya, Kec. Cibitung,<br/>
+                  Kabupaten Bekasi, Jawa Barat 17520
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4">
+              <span className="material-symbols-outlined text-primary-container text-3xl mt-1">schedule</span>
+              <div>
+                <h4 className="font-headline-md text-lg">Jam Operasional</h4>
+                <p className="font-body-md text-on-surface-variant leading-relaxed">
+                  Senin - Jumat: 10:00 - 19:00<br/>
+                  Sabtu - Minggu: 11:00 - 17:00
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4">
+              <span className="material-symbols-outlined text-primary-container text-3xl mt-1">call</span>
+              <div>
+                <h4 className="font-headline-md text-lg">WhatsApp</h4>
+                <p className="font-body-md text-on-surface-variant leading-relaxed">
+                  +62 895-3842-64960
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div>
-          <form className="space-y-4">
-            <div>
-              <input className="w-full border border-surface-variant rounded p-4 font-body-md focus:border-primary-container outline-none transition-colors bg-surface-bright" placeholder="Your Name" type="text" />
-            </div>
-            <div>
-              <input className="w-full border border-surface-variant rounded p-4 font-body-md focus:border-primary-container outline-none transition-colors bg-surface-bright" placeholder="Email Address" type="email" />
-            </div>
-            <div>
-              <input className="w-full border border-surface-variant rounded p-4 font-body-md focus:border-primary-container outline-none transition-colors bg-surface-bright" placeholder="Subject" type="text" />
-            </div>
-            <div>
-              <textarea className="w-full border border-surface-variant rounded p-4 font-body-md focus:border-primary-container outline-none transition-colors bg-surface-bright resize-none" placeholder="Your Message..." rows="5"></textarea>
-            </div>
-            <button className="w-full bg-primary-container text-on-primary font-button px-6 py-4 rounded hover:bg-primary transition-colors duration-300" type="button">Send Message</button>
-          </form>
+          <a href="https://wa.me/62895384264960" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white font-button text-lg px-8 py-4 rounded-full hover:bg-[#128C7E] transition-all duration-300 shadow-md hover:shadow-lg w-full md:w-auto">
+            <i className="fa-brands fa-whatsapp text-2xl"></i>
+            Chat Admin Sekarang
+          </a>
         </div>
       </section>
     </Layout>
