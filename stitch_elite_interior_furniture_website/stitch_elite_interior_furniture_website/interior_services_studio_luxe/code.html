@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Interior Services - Studio Luxe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#5d4210",
+                        "on-tertiary-container": "#303132",
+                        "surface-tint": "#785926",
+                        "inverse-on-surface": "#f0f1f1",
+                        "tertiary-container": "#989999",
+                        "outline": "#807568",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-fixed": "#ffddae",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary": "#785926",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "primary-fixed-dim": "#e9c083",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d2c4b5",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#636262",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#e9c083",
+                        "on-surface-variant": "#4e453a",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-container": "#442c00",
+                        "on-secondary-fixed-variant": "#474746",
+                        "secondary-container": "#e2dfde",
+                        "primary-container": "#b8935a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#281800",
+                        "tertiary": "#5d5f5f",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "surface": "#f9f9f9",
+                        "secondary": "#5f5e5e",
+                        "surface-container-low": "#f3f3f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "32px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "button": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .gold-divider {
+            height: 1px;
+            width: 60px;
+            background-color: #b8935a;
+        }
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+        .service-card:hover {
+            border: 1px solid #b8935a;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline-variant">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface" href="#">STUDIO LUXE</a>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300" href="#">Collection</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300" href="#">Furniture</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-button text-button" href="#">Interior</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300" href="#">Partnership</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300" href="#">Projects</a>
+</nav>
+<button class="bg-primary-container text-on-primary font-button text-button px-6 py-3 hover:opacity-90 transition-opacity">Tanya Harga</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24">
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center justify-center mb-section-gap">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A wide angle photograph of a minimalist luxury living room interior. Soft natural light pours in through sheer curtains, illuminating sleek architectural furniture and pristine white walls. The space features clean lines, a neutral color palette with subtle warm wood tones, and uncluttered elegance. High-end editorial photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGWe2dc1lY7e_dgU98rJ6wCO0_xwytTh8me46T547WB0EfRxBq6HyCDcPZc4Bm_7oKfKgLFTQOkFWVnf3j_MWTYhdovocZlFTJs3hUXwWLAoeHsWlRJSrWRWf2LJfxM3afh0VeikDD_5Bet1tNWkg0fRr0IdAzL3VMh_0gas8R4h0MtSM_XwR-Jm9ayJp_sycjOwaIphEvp9gX-rU9ZN0W1e6zxKBi_4y4gT_kV8AvAifEsSbmLvmaGHd2e07FjR5HEmHy6ctgBpCY')"></div>
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+<div class="relative z-10 text-center text-white px-margin-mobile">
+<h1 class="font-headline-xl text-headline-xl mb-4 hidden md:block">Bespoke Interior Solutions</h1>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile mb-4 md:hidden">Bespoke Interior</h1>
+<div class="gold-divider mx-auto mb-6"></div>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto">Elevating spaces with minimalist precision and curated sophistication.</p>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Our Services</h2>
+<div class="gold-divider mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Custom Kitchen -->
+<div class="service-card group cursor-pointer overflow-hidden bg-white border border-transparent transition-all duration-300">
+<div class="aspect-[4/5] overflow-hidden mb-6">
+<img class="service-img w-full h-full object-cover transition-transform duration-500" data-alt="A meticulously designed modern kitchen with matte black cabinetry, seamless integrated appliances, and a stunning white marble island. Subtle gold hardware accents catch the light. The composition is clean, symmetrical, and exudes minimalist premium luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnAAeeEKla5uu9uPTu3eppi0op17DsAk0ClZ5j_Q6p_LqwFxVXeAmnTfzxS3nFpuxBDGWpKC_85Qcvw3OxFLTjmx6yfmgUP72uFUO_AEqHO5T1bkl-PzBU6kwAB0menXVchwau-zidXHjHKfH2ICeXwFEuK1RzpeQZFn2OVh-vruIIk2Rf4Vk6LEmlK-HqOsJSVEtIMAX9EXyUlfNRDCqFG6DvTP-K8bRkwArGNJA-kLq18SZ288ZX-BPWrZ84XLVhcH0l_jlxO80f"/>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-headline-md mb-2">Custom Kitchen Sets</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored culinary spaces blending flawless functionality with refined aesthetics.</p>
+</div>
+</div>
+<!-- Living Room -->
+<div class="service-card group cursor-pointer overflow-hidden bg-white border border-transparent transition-all duration-300">
+<div class="aspect-[4/5] overflow-hidden mb-6">
+<img class="service-img w-full h-full object-cover transition-transform duration-500" data-alt="An elegant, minimalist living room featuring a low-profile designer sofa in a textured neutral fabric. A monolithic stone coffee table sits in the center. The room is bathed in soft, diffused light, highlighting the architectural detailing and spacious, breathable layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBADG0pp76ulT2XgLWQkxDiaVGq8Q7p8OfC-5TXjEsriMJNDlKUUqbg5KSJV1ncqR1_ntoyaysp1RInpJrAq8L3CtAv3d8c2yMI1GRMJm1RnnwqlZ9DuI06l0E4k_iu811CAlP9sJJfi0koyrb2nLEpPt94Y9MvTcPgszIAofnea2m74ZvsHYHXXmi-X7wfqoe_7Lx60U44DgVA7gx2ce358IiHa-qZZy4vgi_Dc0s6nzePvQSrTC1hP-oVNlYF76qCKh6Rz_hQGFhI"/>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-headline-md mb-2">Living Room Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Curated gathering spaces designed for comfort and understated luxury.</p>
+</div>
+</div>
+<!-- Kids Bedroom -->
+<div class="service-card group cursor-pointer overflow-hidden bg-white border border-transparent transition-all duration-300">
+<div class="aspect-[4/5] overflow-hidden mb-6">
+<img class="service-img w-full h-full object-cover transition-transform duration-500" data-alt="A sophisticated yet playful child's bedroom design. Built-in wooden bunk beds with clean lines and hidden storage. A muted pastel color palette with warm lighting. The space maintains a minimalist aesthetic while offering a serene environment for rest and play." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZm2suaDzf3SYAmALs6K8MW5lF3Jc3fyZDfrexTpIFbXhzorK7W1Q4iIkR6p5_Cv12LeleNBdXTXp2a3FOPJP1fV_wXdLFWWQjS1-mZZYnDEvph2L73Ylxcl0w2oocB86V3ibvSE_8ym6d0gluw4XOxMndtNvZRPdz3aUMa9hqz4MYIYVQNJteVYky9ogUinldisr6xcxBUWBixOv3xWHehfw9L64Ebcl7lE4C3y2Z5OszxKMzJ_4dikIjad5tn03S5zvvIVgYvM5V"/>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-headline-md mb-2">Kids Bedrooms</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Imaginative yet structured environments that grow with your family.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="bg-surface-bright py-section-gap mb-section-gap border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">The Process</h2>
+<div class="gold-divider mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant -z-10 -translate-y-1/2"></div>
+<!-- Step 1 -->
+<div class="text-center bg-white p-6 relative">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center mx-auto mb-4 font-headline-md text-headline-md">1</div>
+<h4 class="font-button text-button mb-2 uppercase tracking-widest">Konsultasi</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Understanding your vision and spatial requirements.</p>
+</div>
+<!-- Step 2 -->
+<div class="text-center bg-white p-6 relative">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center mx-auto mb-4 font-headline-md text-headline-md">2</div>
+<h4 class="font-button text-button mb-2 uppercase tracking-widest">Desain</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Translating concepts into precise visual layouts.</p>
+</div>
+<!-- Step 3 -->
+<div class="text-center bg-white p-6 relative">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center mx-auto mb-4 font-headline-md text-headline-md">3</div>
+<h4 class="font-button text-button mb-2 uppercase tracking-widest">Produksi</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Crafting elements with premium materials and expertise.</p>
+</div>
+<!-- Step 4 -->
+<div class="text-center bg-white p-6 relative">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center mx-auto mb-4 font-headline-md text-headline-md">4</div>
+<h4 class="font-button text-button mb-2 uppercase tracking-widest">Instalasi</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Flawless execution and final spatial arrangement.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA & Trust Signals -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-section-gap">
+<h2 class="font-headline-lg text-headline-lg mb-6">Ready to Transform Your Space?</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
+<button class="bg-primary-container text-on-primary font-button text-button px-8 py-4 w-full md:w-auto hover:opacity-90 transition-opacity">
+                    Konsultasi Sekarang
+                </button>
+<a class="flex items-center gap-2 text-on-surface border border-on-surface px-8 py-4 font-button text-button hover:bg-surface-variant transition-colors w-full md:w-auto justify-center" href="#">
+<span class="material-symbols-outlined">chat</span>
+                    WhatsApp
+                </a>
+</div>
+<div class="flex flex-col md:flex-row justify-center items-center gap-8 text-on-surface-variant font-body-md text-body-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container">verified</span>
+<span>Expert Designers</span>
+</div>
+<div class="hidden md:block w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container">diamond</span>
+<span>Quality Materials</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-inverse-surface w-full py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1 mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md font-bold text-on-primary dark:text-on-primary mb-6">STUDIO LUXE</div>
+<p class="text-surface-variant font-body-md text-body-md mb-4 text-sm">© 2024 Studio Luxe. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">About</a>
+<a class="text-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">FAQ</a>
+<a class="text-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Article</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Career</a>
+<a class="text-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Terms</a>
+<a class="text-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Privacy</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">WhatsApp</a>
+<a class="text-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Showroom</a>
+</div>
+</div>
+</footer>
+</body></html>

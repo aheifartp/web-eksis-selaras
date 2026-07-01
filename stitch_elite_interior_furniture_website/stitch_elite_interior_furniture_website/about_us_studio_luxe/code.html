@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | STUDIO LUXE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#5d4210",
+                        "on-tertiary-container": "#303132",
+                        "surface-tint": "#785926",
+                        "inverse-on-surface": "#f0f1f1",
+                        "tertiary-container": "#989999",
+                        "outline": "#807568",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-fixed": "#ffddae",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary": "#785926",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "primary-fixed-dim": "#e9c083",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d2c4b5",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#636262",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#e9c083",
+                        "on-surface-variant": "#4e453a",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-container": "#442c00",
+                        "on-secondary-fixed-variant": "#474746",
+                        "secondary-container": "#e2dfde",
+                        "primary-container": "#b8935a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#281800",
+                        "tertiary": "#5d5f5f",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "surface": "#f9f9f9",
+                        "secondary": "#5f5e5e",
+                        "surface-container-low": "#f3f3f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "32px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "button": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 1.5rem;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-button.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        .hover-gold-border {
+            position: relative;
+        }
+        .hover-gold-border::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid transparent;
+            transition: border-color 0.3s ease;
+            pointer-events: none;
+        }
+        .hover-gold-border:hover::after {
+            border-color: #B8935A;
+        }
+        .image-zoom-container {
+            overflow: hidden;
+        }
+        .image-zoom-container img {
+            transition: transform 0.5s ease;
+        }
+        .hover-gold-border:hover .image-zoom-container img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline-variant">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface" href="#">STUDIO LUXE</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-primary border-b-2 border-primary pb-1 hover:text-primary dark:hover:text-primary-fixed transition-all duration-300 font-button text-button" href="#">About</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300 hover:text-primary dark:hover:text-primary-fixed transition-all duration-300 font-button text-button" href="#">Collection</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300 hover:text-primary dark:hover:text-primary-fixed transition-all duration-300 font-button text-button" href="#">Furniture</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300 hover:text-primary dark:hover:text-primary-fixed transition-all duration-300 font-button text-button" href="#">Interior</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300 hover:text-primary dark:hover:text-primary-fixed transition-all duration-300 font-button text-button" href="#">Partnership</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300 hover:text-primary dark:hover:text-primary-fixed transition-all duration-300 font-button text-button" href="#">Projects</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="bg-primary-container text-on-primary px-6 py-3 font-button text-button transition-transform duration-200 hover:scale-[0.98]">
+                    Tanya Harga
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-[100px]">
+<!-- Hero / Brand Story -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<h1 class="font-headline-xl text-headline-xl mb-6 text-on-background">Crafting Spaces<br/>of Distinction</h1>
+<div class="w-[60px] h-px bg-primary-container mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md">
+                        Studio Luxe is dedicated to the art of refined living. We believe that every space holds the potential for extraordinary beauty, balancing classic authority with modern minimalism.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                        Founded on principles of uncompromising quality and editorial elegance, we curate and create architectural furniture and bespoke interior solutions for the discerning eye.
+                    </p>
+</div>
+<div class="hover-gold-border group h-[600px] w-full">
+<div class="image-zoom-container w-full h-full bg-surface-variant">
+<img alt="Brand Story Image" class="w-full h-full object-cover" data-alt="A high-end, minimalist living room showcasing bespoke architectural furniture. Soft, natural light streams across a pristine white marble floor, highlighting the textures of a dark charcoal velvet sofa and a sleek, thin-legged brass coffee table. The aesthetic is extremely clean, uncluttered, and exudes an editorial, minimalist-premium luxury vibe. A large, abstract monochromatic painting hangs on a stark white wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEJYnX6Km0B7LC6OuOSIdIlfAz1pvy6lLTZr9vbhQkoGddFnyDFvI9AZwE46aLhhvZjEuWyrR0h6f7eJRQMgIGrNtcg2lw-EOK1PUT4XDb9j54Gok9IG6FqcUfBjUpKE40VB1b6ENgkmLaenPray2fYD0JoiHyZa_n1oScwqBv8DgHMYiS8dLsZOgwowhnPcwf3R76UswvN8kubX0vprGAC5SZLYoa9fAvgX0czV4j5EXD6byIajCFGPJS8xTIe35DJ65uf01ddA5H"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition Bento Grid -->
+<section class="bg-surface-bright py-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Our Philosophy</h2>
+<div class="w-[60px] h-px bg-primary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value 1 -->
+<div class="bg-surface p-8 border border-[#E5E5E5] hover:border-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" style="font-variation-settings: 'FILL' 0;">architecture</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4 text-[24px]">Bespoke Craftsmanship</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Every piece is meticulously crafted, ensuring precision in every joint and perfection in every finish, embodying true architectural furniture.
+                        </p>
+</div>
+<!-- Value 2 -->
+<div class="bg-surface p-8 border border-[#E5E5E5] hover:border-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" style="font-variation-settings: 'FILL' 0;">diamond</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4 text-[24px]">Premium Materials</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            We source only the finest materials globally—from rich, sustainably harvested woods to exquisite, hand-selected stones.
+                        </p>
+</div>
+<!-- Value 3 -->
+<div class="bg-surface p-8 border border-[#E5E5E5] hover:border-primary-container transition-colors duration-300 md:col-span-1">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6" style="font-variation-settings: 'FILL' 0;">handshake</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4 text-[24px]">Curated Service</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Our design consultants provide an unparalleled level of personalized service, guiding you to realize your exact aesthetic vision.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Showroom Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="order-2 md:order-1 bg-surface-variant h-[500px]">
+<img alt="Showroom Map" class="w-full h-full object-cover" data-alt="A beautifully styled map marking a premium showroom location in Jakarta. The map style is minimalist, using a subtle color palette of light greys, whites, and thin gold lines for major roads, matching the brand's aesthetic." data-location="Jakarta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjrUxX1ampXOaj6Xn1eVBwbfRY6Mf_2OU9ZxWugJpMpj2JVaO1haWaxNS8p_iO2t3uskYzElpLQcMimelUaDdLaoxBNfGHMjPnIexS59rDpxUTwcmgJTGXmPQoUyUKpNvGTzfNQLcMMM-oqh7UihCPJQ53xqSZu8N9Mq-5AOxlABzpKa9smkLqDepepcOhJjPJcvJcxP3uJ4_tXCA7WA9lE9Ufif5ObiFFNbyYk8xQCNUMtHAtoLfdodfxv_uRXN0MBjqE77ItupFD"/>
+</div>
+<div class="order-1 md:order-2 flex flex-col justify-center px-0 md:px-12">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Experience Studio Luxe</h2>
+<div class="w-[60px] h-px bg-primary-container mb-8"></div>
+<div class="mb-8">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-2">Location</h3>
+<p class="font-body-md text-body-md text-on-background">
+                            Jakarta Design District<br/>
+                            Jl. Kemang Raya No. 10,<br/>
+                            South Jakarta, Indonesia
+                        </p>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-2">Hours</h3>
+<p class="font-body-md text-body-md text-on-background">
+                            Monday - Friday: 10:00 AM - 7:00 PM<br/>
+                            Saturday - Sunday: By Appointment
+                        </p>
+</div>
+<div class="mt-10">
+<button class="bg-transparent border border-on-background text-on-background px-6 py-3 font-button text-button hover:bg-on-background hover:text-on-primary transition-colors duration-300">
+                            Book Appointment
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-surface-bright py-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Inquiries</h2>
+<div class="w-[60px] h-px bg-primary-container mx-auto"></div>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<div class="border-b border-[#E5E5E5]">
+<button class="accordion-button w-full flex justify-between items-center py-4 text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-[20px] text-on-background">Do you offer custom furniture design?</span>
+<span class="material-symbols-outlined accordion-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Yes, we specialize in bespoke furniture tailored to your exact specifications. Our design team will work closely with you from concept to creation.
+                            </p>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="border-b border-[#E5E5E5]">
+<button class="accordion-button w-full flex justify-between items-center py-4 text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-[20px] text-on-background">What is the typical lead time for an order?</span>
+<span class="material-symbols-outlined accordion-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Lead times vary depending on the complexity of the piece and material availability. Generally, custom orders take between 8 to 12 weeks.
+                            </p>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="border-b border-[#E5E5E5]">
+<button class="accordion-button w-full flex justify-between items-center py-4 text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-[20px] text-on-background">Do you provide international shipping?</span>
+<span class="material-symbols-outlined accordion-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                We currently ship across Southeast Asia. For other international destinations, please contact our team to arrange specialized freight forwarding.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-inverse-surface w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-primary dark:text-on-primary mb-6">STUDIO LUXE</div>
+<p class="font-body-md text-body-md text-surface-variant mb-6">
+                    Redefining luxury through minimalist design and uncompromising craftsmanship.
+                </p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300" href="#">About</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300" href="#">Career</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300" href="#">Showroom</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300" href="#">FAQ</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300" href="#">Article</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">Legal &amp; Support</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300" href="#">Terms</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300" href="#">Privacy</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300" href="#">WhatsApp</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#333333] px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto text-center md:text-left">
+<p class="font-label-caps text-label-caps text-surface-variant">© 2024 Studio Luxe. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.accordion-button').forEach(btn => {
+                btn.classList.remove('active');</script></body></html>
